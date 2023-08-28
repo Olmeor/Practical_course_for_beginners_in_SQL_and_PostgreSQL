@@ -1,4 +1,4 @@
-Домашняя работа 1. Обработка ошибок
+Домашняя работа 1. Обработка ошибок (ответы)
 Код
 CREATE OR replace FUNCTION should_increase_salary(
 	cur_salary numeric,
@@ -30,8 +30,7 @@ BEGIN
 	END IF;	
 END;
 $$ LANGUAGE plpgsql;
-
-Задание
+Задание (Решено верно)
 Модифицировать функцию should_increase_salary разработанную в секции по функциям таким образом, чтобы запретить (выбрасывая исключения) передачу аргументов так, что:
 
 минимальный уровень з/п превышает максимальный
@@ -43,7 +42,6 @@ c = 79, max = 10, min = 80, r = 0.2
 c = 79, max = 10, min = -1, r = 0.2
 c = 79, max = 10, min = 10, r = 0.04
 Решение
-
 CREATE OR replace FUNCTION should_increase_salary(
 	cur_salary numeric,
 	max_salary numeric DEFAULT 80, 
